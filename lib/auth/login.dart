@@ -282,7 +282,7 @@ class _Login_ScreenState extends State<Login_Screen> {
 
                               GestureDetector(
                                 onTap: (){
-                                  print("forget button clicked");
+                                  // print("forget button clicked");
                                   Get.toNamed("/reset-password");
 
 
@@ -308,8 +308,8 @@ class _Login_ScreenState extends State<Login_Screen> {
                             width: double.infinity,
                             child: ElevatedButton(
                               onPressed: (){
-                                print("email: "+ emailController.text );
-                                print("password: "+ passwordController.text);
+                                // print("email: "+ emailController.text );
+                                // print("password: "+ passwordController.text);
                                 _login();
                               },
                               style: ElevatedButton.styleFrom(

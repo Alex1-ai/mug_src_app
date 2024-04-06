@@ -49,7 +49,7 @@ class _EditProfileState extends State<EditProfile> {
 
   @override
   Widget build(BuildContext context) {
-    
+
   final userProfile = Provider.of<UserProfileProvider>(context);
     Future<void> _updateProfile() async {
       // var authController = Get.find<AuthController>();
@@ -57,7 +57,7 @@ class _EditProfileState extends State<EditProfile> {
       String phone = phoneController.text.trim();
       String level = levelController.text.trim();
       String course = courseController.text.trim();
-      
+
       setState(() {
         _isLoading = true;
       });
@@ -102,7 +102,7 @@ class _EditProfileState extends State<EditProfile> {
           // // Send email verification link
           // await auth.currentUser!.sendEmailVerification();
 
-          
+
           // Navigator.of(context).pushReplacementNamed("/login-page");
           // showDialog(
           //               context: context,
@@ -151,7 +151,7 @@ class _EditProfileState extends State<EditProfile> {
 
 
 
-    
+
 //    print(_obscureText);
     return Scaffold(
       body: SingleChildScrollView(
@@ -168,7 +168,7 @@ class _EditProfileState extends State<EditProfile> {
             ],
             begin: Alignment.topLeft,
             end: Alignment.centerRight,
-            
+
             )
           ),
 
@@ -214,7 +214,7 @@ class _EditProfileState extends State<EditProfile> {
                   // SizedBox(height: 10.0,),
                   SizedBox(height: Dimensions.height10,),
 
-                     
+
                   Text("Edit and update your profile",
                             style: TextStyle(
                               color: Colors.white,
@@ -222,10 +222,10 @@ class _EditProfileState extends State<EditProfile> {
                               fontSize: Dimensions.font20 + 4,
                               fontWeight: FontWeight.w300,
                       ),),
-                      
+
 
                   ]),
-                  
+
                   )
                 ),
 
@@ -345,7 +345,7 @@ class _EditProfileState extends State<EditProfile> {
                               //         onTap: () {
                               //           setState(() {
                               //             _obscureText = !_obscureText;
-                                          
+
                               //           });
                               //         },
                               //         child: Icon(
@@ -387,17 +387,17 @@ class _EditProfileState extends State<EditProfile> {
                             width: double.infinity,
                             child: ElevatedButton(
                               onPressed: (){
-                                
-                                print(" level: " + levelController.text);
-                                print(" Name :" + nameController.text);
-                                print( "Phone :"+ phoneController.text);
-                                print("Department: "+ courseController.text);
+
+                                // print(" level: " + levelController.text);
+                                // print(" Name :" + nameController.text);
+                                // print( "Phone :"+ phoneController.text);
+                                // print("Department: "+ courseController.text);
                                 _updateProfile();
                               },
                               style: ElevatedButton.styleFrom(
                                 primary: AppColors.mainColor
                               ),
-                               
+
                               child: Padding(
                                 //padding: const EdgeInsets.symmetric(vertical: 16.0),
                                padding: EdgeInsets.symmetric(vertical:Dimensions.height20 -3),
@@ -418,7 +418,7 @@ class _EditProfileState extends State<EditProfile> {
                           //SizedBox(height: 20.0,),
 
                           SizedBox(height: Dimensions.height20 + 2,),
-                        
+
 
 
                         GestureDetector(
@@ -440,15 +440,14 @@ class _EditProfileState extends State<EditProfile> {
                                       decoration: TextDecoration.underline,
                                           ),
                                         ),
-                            
-                        
+
+
                               ]
                             ),
-                          
-                          
+
+
                           ),
                         ),
-            
 
 
 
@@ -461,8 +460,9 @@ class _EditProfileState extends State<EditProfile> {
 
 
 
-                          
-                          
+
+
+
                         ],
                       ),
                     ),
@@ -470,7 +470,7 @@ class _EditProfileState extends State<EditProfile> {
             ],
           ),
         ),
-         
+
       ),
     );
 }

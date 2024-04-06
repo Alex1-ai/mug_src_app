@@ -52,7 +52,7 @@ Future<void> deleteUserAccount(String userId, String password) async {
       throw Exception('Unable to delete account. User not found.');
     }
   } catch (e) {
-    print('Error deleting account: $e');
+    // print('Error deleting account: $e');
     throw Exception('Unable to delete account. Incorrect password or other error.');
   }
 }

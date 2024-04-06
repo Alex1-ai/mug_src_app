@@ -23,7 +23,7 @@ class _Register_ScreenState extends State<Register_Screen> {
   bool endsWithMUCGOrMUG(String email) {
   // Define a regular expression pattern to match email addresses ending with specific domains
   final pattern = RegExp(r'@(mucg|mug|st\.mucg|st\.mug)\.edu\.gh$');
-  
+
   // Use the pattern's hasMatch method to check if the email matches the pattern
   return pattern.hasMatch(email);
 }
@@ -103,7 +103,7 @@ class _Register_ScreenState extends State<Register_Screen> {
           // // Send email verification link
           // await auth.currentUser!.sendEmailVerification();
 
-          
+
           // Navigator.of(context).pushReplacementNamed("/login-page");
           // showDialog(
           //               context: context,
@@ -152,7 +152,7 @@ class _Register_ScreenState extends State<Register_Screen> {
 
   @override
   Widget build(BuildContext context) {
-    
+
 //    print(_obscureText);
     return Scaffold(
       body: SingleChildScrollView(
@@ -169,7 +169,7 @@ class _Register_ScreenState extends State<Register_Screen> {
             ],
             begin: Alignment.topLeft,
             end: Alignment.centerRight,
-            
+
             )
           ),
 
@@ -215,7 +215,7 @@ class _Register_ScreenState extends State<Register_Screen> {
                   // SizedBox(height: 10.0,),
                   SizedBox(height: Dimensions.height10,),
 
-                     
+
                   Text("Welcome to SRC (MUG) App",
                             style: TextStyle(
                               color: Colors.white,
@@ -223,10 +223,10 @@ class _Register_ScreenState extends State<Register_Screen> {
                               fontSize: Dimensions.font20 + 4,
                               fontWeight: FontWeight.w300,
                       ),),
-                      
+
 
                   ]),
-                  
+
                   )
                 ),
 
@@ -344,7 +344,7 @@ class _Register_ScreenState extends State<Register_Screen> {
                                       onTap: () {
                                         setState(() {
                                           _obscureText = !_obscureText;
-                                          
+
                                         });
                                       },
                                       child: Icon(
@@ -387,15 +387,15 @@ class _Register_ScreenState extends State<Register_Screen> {
                             child: ElevatedButton(
                               onPressed: (){
                                 _registration();
-                                print(" email: " + emailController.text);
-                                print(" Name :" + nameController.text);
-                                print( "Phone :"+ phoneController.text);
-                                print("Password: "+ passwordController.text);
+                                // print(" email: " + emailController.text);
+                                // print(" Name :" + nameController.text);
+                                // print( "Phone :"+ phoneController.text);
+                                // print("Password: "+ passwordController.text);
                               },
                               style: ElevatedButton.styleFrom(
                                 primary: AppColors.mainColor
                               ),
-                               
+
                               child: Padding(
                                 //padding: const EdgeInsets.symmetric(vertical: 16.0),
                                padding: EdgeInsets.symmetric(vertical:Dimensions.height20 -3),
@@ -416,7 +416,7 @@ class _Register_ScreenState extends State<Register_Screen> {
                           //SizedBox(height: 20.0,),
 
                           SizedBox(height: Dimensions.height20 + 2,),
-                        
+
 
 
                         GestureDetector(
@@ -440,15 +440,14 @@ class _Register_ScreenState extends State<Register_Screen> {
                                       decoration: TextDecoration.underline,
                                           ),
                                         ),
-                            
-                        
+
+
                               ]
                             ),
-                          
-                          
+
+
                           ),
                         ),
-            
 
 
 
@@ -461,8 +460,9 @@ class _Register_ScreenState extends State<Register_Screen> {
 
 
 
-                          
-                          
+
+
+
                         ],
                       ),
                     ),
@@ -470,7 +470,7 @@ class _Register_ScreenState extends State<Register_Screen> {
             ],
           ),
         ),
-         
+
       ),
     );
   }
