@@ -15,6 +15,7 @@ class TermsAndCondition extends StatefulWidget {
 class _TermsAndConditionState extends State<TermsAndCondition> {
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColors.appBarColor,
